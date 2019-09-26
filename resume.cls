@@ -45,8 +45,8 @@
 }
 \newcommand{\university}[4]{
   \global\def\@university{#1}
-  \global\def\@universityStartDate{#2}
-  \global\def\@universityEndDate{#3}
+  \global\def\@universityStart{#2}
+  \global\def\@universityEnd{#3}
   \global\def\@universityDegree{#4}
 }
 \newcommand{\website}[2]{
@@ -55,7 +55,6 @@
 }
 
 \def\@bulletspace{-0.7em}
-
 
 \AtBeginDocument{
     % Place this in a hook, so that we can safely set the colors in the
@@ -71,6 +70,15 @@
 
     \newcommand{\level}{
     \textcolor[HTML]{\@accentcolor}{●} \hspace{\@bulletspace}
+    }
+
+    \newcommand{\makeedu}{
+      \section{Education}
+    \emph{\@university}
+
+    \emph{\@universityStart}\textendash\emph{\@universityEnd}
+
+    \emph{\@universityDegree}
     }
 }
 
