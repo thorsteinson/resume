@@ -10,6 +10,7 @@
 \RequirePackage{graphicx}
 \RequirePackage{booktabs}
 \RequirePackage{relsize}
+\RequirePackage{hyperref}
 \RequirePackage{lipsum} % Dummy text to verify formatting behavior
 \RequirePackage[top=0.75in, left=0.5in, right=0.5in]{geometry}
 
@@ -24,6 +25,34 @@
 % Default colors, they are ugly, which will hopefully prompt changing them
 \primarycolor{ff0000}
 \accentcolor{0000ff}
+
+% Commands for contact info
+\newcommand{\phone}[1]{
+  \global\def\@phone{#1}
+}
+\newcommand{\email}[1]{
+  \global\def\@email{#1}
+  \global\def\@emailURL{mailto://#1}
+}
+% Only include the portion after the 'in/'. URL will be constructed
+% automatically from the rest
+\newcommand{\linkedin}[1]{
+  \global\def\@linkedin{#1}
+  \global\def\@linkedinURL{https://linked.com/in/#1}
+}
+\newcommand{\address}[1]{
+  \global\def\@address{#1}
+}
+\newcommand{\university}[4]{
+  \global\def\@university{#1}
+  \global\def\@universityStartDate{#2}
+  \global\def\@universityEndDate{#3}
+  \global\def\@universityDegree{#4}
+}
+\newcommand{\website}[2]{
+  \global\def\@website{#1}
+  \global\def\@websiteURL{#2}
+}
 
 \def\@bulletspace{-0.7em}
 
