@@ -207,7 +207,8 @@
 % the \skill command should be used in this table.
 \newenvironment{skilltable}[1]{
   \subsection{#1}
-  \begin{tabular}{r l}
+  % Need the fixed width so that the dots align between sections
+  \begin{tabular}{p{0.5in} l}
 }{\end{tabular}}
 
 % Allows for specifying the level of a named skill inside of a skill table
