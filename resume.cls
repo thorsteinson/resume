@@ -2,18 +2,19 @@
 \ProvidesClass{resume}[2019/09/25 Resume Class]
 
 \LoadClass[letterpaper, oneside, final]{article} 
-\RequirePackage{xcolor}
+\RequirePackage[dvipsnames]{xcolor}
 \RequirePackage{titlesec} % Allows creating custom \section's
 \RequirePackage{marvosym} % Allows the use of symbols
 \RequirePackage{fontspec} % Allows font customization
 \RequirePackage{forloop}
 \RequirePackage{graphicx}
 \RequirePackage{booktabs}
-\RequirePackage{relsize}
-\RequirePackage{hyperref}
+\RequirePackage{etoolbox}
 \RequirePackage{lipsum} % Dummy text to verify formatting behavior
 \RequirePackage[top=0.75in, left=0.5in, right=0.5in]{geometry}
 
+
+\RequirePackage[colorlinks=true, urlcolor=MidnightBlue]{hyperref}
 
 \newcommand{\primarycolor}[1]{
   \global\def\@primarycolor{#1}
@@ -32,13 +33,13 @@
 }
 \newcommand{\email}[1]{
   \global\def\@email{#1}
-  \global\def\@emailURL{mailto://#1}
+  \global\def\@emailURL{mailto:#1}
 }
 % Only include the portion after the 'in/'. URL will be constructed
 % automatically from the rest
 \newcommand{\linkedin}[1]{
-  \global\def\@linkedin{#1}
-  \global\def\@linkedinURL{https://linked.com/in/#1}
+  \global\def\@linkedin{linkedin.com/#1}
+  \global\def\@linkedinURL{https://www.linkedin.com/in/#1}
 }
 \newcommand{\address}[1]{
   \global\def\@address{#1}
@@ -79,6 +80,15 @@
     \emph{\@universityStart}\textendash\emph{\@universityEnd}
 
     \emph{\@universityDegree}
+    }
+
+    \newcommand{\makecontact}{
+      \section{Contact}
+      \begin{tabular}{c l}
+      {\Large \Letter} & \href{\@emailURL}{\@email} \\
+      \ifdef{\@phone}{{\Large \Telefon} & \@phone \\}{}
+      \includegraphics[width=10pt]{../linkedin-logo} & \href{\@linkedinURL}{\@linkedin} \\
+      \end{tabular}
     }
 }
 
