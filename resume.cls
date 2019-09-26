@@ -178,12 +178,21 @@
 % next column. It's easier for a user to understand.
 \newcommand{\newcolumn}{&}
 
-% A command with 4 parameters that constructs a table for us with
-% employment information
-\newcommand{\employer}[4]{
+% An environment for capturing employment information. Add teams
+% inside of this environment for more detail, or just add plain
+% paragraphs if teams are too excessive.
+\newenvironment{employer}[4]{
   \begin{tabular}{l l}
     \tableheaderfont Employer & #1 \\
     \tableheaderfont Period & #2 -- #3 \\
     \tableheaderfont Title &  #4 \\
   \end{tabular}
-}
+
+  \subsection{Teams}
+}{\par}
+
+% An environment that captures a single team. Takes the name of the
+% team and the starting period or time length for that team.
+\newenvironment{team}[2]{
+  {\subsubsectionfont #1 \hfill #2} \par
+}{\par}
