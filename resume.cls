@@ -184,18 +184,16 @@
 % An environment for capturing employment information. Add teams
 % inside of this environment for more detail, or just add plain
 % paragraphs if teams are too excessive.
-\newenvironment{employer}[4]{
+\newenvironment{employer}[5][none]{
+  \subsection{#2 \hfill
+    \ifthenelse{\equal{#1}{none}}{}{\includegraphics[height=0.33in]{#1}}}
   \begin{tabular}{l l}
-    \tableheaderfont Employer & #1 \\
-    \tableheaderfont Period & #2 -- #3 \\
-    \tableheaderfont Title &  #4 \\
+    \tableheaderfont Period & #3 -- #4 \\
+    \tableheaderfont Title &  #5 \\
   \end{tabular}
+  }{\par}
 
   
-}{\par}
-
-% A container for teams
-\newenvironment{teams}{\subsection{Teams}}{}
 % An environment that captures a single team. Takes the name of the
 % team and the starting period or time length for that team.
 \newenvironment{team}[2]{
