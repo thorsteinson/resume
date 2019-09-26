@@ -80,16 +80,17 @@
     \textcolor[HTML]{\@accentcolor}{○} \hspace{\@bulletspace}
     }
 
-    \newcommand{\makeedu}{
+    \newcommand{\@makeedu}{
       \section{Education}
     \emph{\@university}
 
     \emph{\@universityStart}\textendash\emph{\@universityEnd}
 
     \emph{\@universityDegree}
+    \par
     }
 
-    \newcommand{\makecontact}{
+    \newcommand{\@makecontact}{
       \section{Contact}
       \begin{tabular}{c l}
       \ifdef{\@website}{\includegraphics[width=10pt]{../world} & \href{\@websiteURL}{\@website} \\}{}
@@ -108,6 +109,8 @@
 
 
 \AtEndDocument{
+  \@makeedu
+  \@makecontact
   \end{@resume}
 }
 
