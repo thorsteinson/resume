@@ -153,7 +153,7 @@
 
 \renewcommand{\maketitle}{
   {
-    \titlefont \Huge \@author 
+    \titlefont \Huge \MakeUppercase{\@author}
   \vspace{1.0em}
     }
 }
