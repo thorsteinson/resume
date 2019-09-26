@@ -77,6 +77,10 @@
     \textcolor[HTML]{\@accentcolor}{●} \hspace{\@bulletspace}
     }
 
+    \newcommand{\emptylevel}{
+    \textcolor[HTML]{\@accentcolor}{○} \hspace{\@bulletspace}
+    }
+
     \newcommand{\makeedu}{
       \section{Education}
     \emph{\@university}
@@ -100,9 +104,6 @@
 }
 
 
-\newcommand{\emptylevel}{
-  ● \hspace{\@bulletspace}
-}
 
 
 \newcounter{ct}
