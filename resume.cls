@@ -51,8 +51,6 @@
   \emphasisfont #1
 }
 
-% Variable that stores author. Should be uppercase
-\renewcommand{\author}{CALEB THORSTEINSON}
 \pagenumbering{gobble} % Suppresses page numbers
 
 \renewcommand{\section}[1]{
@@ -83,7 +81,7 @@
 
 \renewcommand{\maketitle}{
   {
-    \titlefont \Huge \author 
+    \titlefont \Huge \@author 
   \vspace{1.0em}
     }
 }
