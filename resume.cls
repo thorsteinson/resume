@@ -177,3 +177,13 @@
 % Since we're in a table, this just adds the ampersand to mark the
 % next column. It's easier for a user to understand.
 \newcommand{\newcolumn}{&}
+
+% A command with 4 parameters that constructs a table for us with
+% employment information
+\newcommand{\employer}[4]{
+  \begin{tabular}{l l}
+    \tableheaderfont Employer & #1 \\
+    \tableheaderfont Period & #2 -- #3 \\
+    \tableheaderfont Title &  #4 \\
+  \end{tabular}
+}
