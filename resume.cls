@@ -191,9 +191,11 @@
     \tableheaderfont Title &  #4 \\
   \end{tabular}
 
-  \subsection{Teams}
+  
 }{\par}
 
+% A container for teams
+\newenvironment{teams}{\subsection{Teams}}{}
 % An environment that captures a single team. Takes the name of the
 % team and the starting period or time length for that team.
 \newenvironment{team}[2]{
