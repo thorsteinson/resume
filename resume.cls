@@ -7,10 +7,11 @@
 \RequirePackage{fontspec} % Allows font customization
 \RequirePackage{forloop}
 \RequirePackage{graphicx}
+\RequirePackage{multirow}
 \RequirePackage{booktabs}
 \RequirePackage{etoolbox}
 \RequirePackage{lipsum} % Dummy text to verify formatting behavior
-\RequirePackage[top=0.75in, left=0.5in, right=0.5in]{geometry}
+\RequirePackage[top=0.75in, left=0.5in, right=0.5in, bottom=0.5in]{geometry}
 
 
 \RequirePackage[colorlinks=true, urlcolor=MidnightBlue]{hyperref}
@@ -69,7 +70,7 @@
     \newfontfamily\sectionfont{Work Sans SemiBold}[Letters=SmallCaps,
     Color=\@primarycolor]
     \newfontfamily\tableheaderfont{Work Sans Medium}[Letters=SmallCaps]
-    \newfontfamily\subsubsectionfont{Work Sans Bold}
+    \newfontfamily\subsubsectionfont{Work Sans Medium}[Letters=SmallCaps, Color=\@primarycolor]
     \newfontfamily\emphasisfont{Work Sans Medium}
 
     \newcommand{\level}{
@@ -154,9 +155,9 @@
 
 \renewcommand{\subsubsection}[1]{
   {
-    \vspace{0.5em}
+    \vspace{0.4em}
     \subsubsectionfont #1 \par
-    \vspace{0.5em}
+    \vspace{0.2em}
   }
 }
 
@@ -185,19 +186,27 @@
 % inside of this environment for more detail, or just add plain
 % paragraphs if teams are too excessive.
 \newenvironment{employer}[5][none]{
-  \subsection{#2 \hfill
-    \ifthenelse{\equal{#1}{none}}{}{\includegraphics[height=0.33in]{#1}}}
-  \begin{tabular}{l l}
-    \tableheaderfont Period & #3 -- #4 \\
-    \tableheaderfont Title &  #5 \\
-  \end{tabular}
+  \subsection{#2}
+  \ifthenelse{\equal{#1}{none}}{
+    \begin{tabular}{l l}
+        \tableheaderfont Period & #3 -- #4 \\
+        \tableheaderfont Title &  #5 \\
+    \end{tabular}
+  }{
+    \begin{tabular}{c l l}
+        \multirow{2}{*}{\includegraphics[height=0.33in]{#1}} &
+        \tableheaderfont Period & #3 -- #4 \\
+        & \tableheaderfont Title &  #5 \\
+    \end{tabular}
+    }
+  \par
   }{\par}
 
   
 % An environment that captures a single team. Takes the name of the
 % team and the starting period or time length for that team.
 \newenvironment{team}[2]{
-  {\subsubsectionfont #1 \hfill #2} \par
+  \subsubsection{#1 \hfill #2} \par
 }{\par}
 
 
