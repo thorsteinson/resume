@@ -89,10 +89,12 @@
     \newcommand{\makecontact}{
       \section{Contact}
       \begin{tabular}{c l}
-      {\Large \Letter} & \href{\@emailURL}{\@email} \\
-      \ifdef{\@phone}{{\Large \Telefon} & \@phone \\}{}
-      \includegraphics[width=10pt]{../linkedin-logo} & \href{\@linkedinURL}{\@linkedin} \\
+      \ifdef{\@website}{\includegraphics[width=10pt]{../world} & \href{\@websiteURL}{\@website} \\}{}
       \ifdef{\@github}{\includegraphics[width=10pt]{../GitHub-Mark} & \href{\@githubURL}{\@github} \\}{}
+      \includegraphics[width=10pt]{../envelope} & \href{\@emailURL}{\@email} \\
+      \includegraphics[width=10pt]{../linkedin-logo} & \href{\@linkedinURL}{\@linkedin} \\
+      \ifdef{\@phone}{\includegraphics[width=10pt]{../telephone} & \@phone \\}{}
+      \includegraphics[width=10pt]{../location} & \@address \\
       \end{tabular}
     }
 }
