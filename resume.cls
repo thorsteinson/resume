@@ -4,7 +4,6 @@
 \LoadClass[letterpaper, oneside, final]{article} 
 \RequirePackage[dvipsnames]{xcolor}
 \RequirePackage{titlesec} % Allows creating custom \section's
-\RequirePackage{marvosym} % Allows the use of symbols
 \RequirePackage{fontspec} % Allows font customization
 \RequirePackage{forloop}
 \RequirePackage{graphicx}
