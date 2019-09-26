@@ -54,6 +54,10 @@
   \global\def\@website{#1}
   \global\def\@websiteURL{#2}
 }
+\newcommand{\github}[1]{
+  \global\def\@github{github.com/#1}
+  \global\def\@githubURL{https://github.com/#1}
+}
 
 \def\@bulletspace{-0.7em}
 
@@ -88,6 +92,7 @@
       {\Large \Letter} & \href{\@emailURL}{\@email} \\
       \ifdef{\@phone}{{\Large \Telefon} & \@phone \\}{}
       \includegraphics[width=10pt]{../linkedin-logo} & \href{\@linkedinURL}{\@linkedin} \\
+      \ifdef{\@github}{\includegraphics[width=10pt]{../GitHub-Mark} & \href{\@githubURL}{\@github} \\}{}
       \end{tabular}
     }
 }
