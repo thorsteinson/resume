@@ -137,23 +137,23 @@
 
 \renewcommand{\section}[1]{
   {
-  \vspace{1.0em}
+  \vspace{2.0em}
   \sectionfont \Large #1 \par
-  \vspace{1.0em}
+  \vspace{0.4em}
   }
 }
 
 \renewcommand{\subsection}[1]{
   {
+  \vspace{1.3em}
   \sectionfont \large #1 \par
+  \vspace{0.4em}
   }
-  \vspace{1.0em}
 }
 
 
 \renewcommand{\subsubsection}[1]{
   {
-    \par
     \vspace{0.5em}
     \subsubsectionfont #1 \par
     \vspace{0.5em}
