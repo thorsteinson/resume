@@ -199,3 +199,16 @@
 \newenvironment{team}[2]{
   {\subsubsectionfont #1 \hfill #2} \par
 }{\par}
+
+
+% An environment where skills are listed along with proficiency. Only
+% the \skill command should be used in this table.
+\newenvironment{skilltable}[1]{
+  \subsection{#1}
+  \begin{tabular}{r l}
+}{\end{tabular}}
+
+% Allows for specifying the level of a named skill inside of a skill table
+\newcommand{\skill}[2]{
+  \tableheaderfont #1 & \proficiency{#2} \\
+}
