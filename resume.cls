@@ -14,22 +14,40 @@
 \RequirePackage[top=0.75in, left=0.5in, right=0.5in]{geometry}
 
 
-% Define fonts we'll use throughout the resume
-\setmainfont{Work Sans}
-\newfontfamily\titlefont{Work Sans Medium}[Letters=Uppercase,
-  Color=1b054c]
-\newfontfamily\sectionfont{Work Sans SemiBold}[Letters=SmallCaps,
-  Color=1d2c4c]
-\newfontfamily\tableheaderfont{Work Sans Medium}[Letters=SmallCaps]
-\newfontfamily\subsubsectionfont{Work Sans Bold}
-\newfontfamily\emphasisfont{Work Sans Medium}
-
-\newcommand{\level}{
-  \textcolor[HTML]{26ad75}{●} \hspace{-0.7em}
+\newcommand{\primarycolor}[1]{
+  \global\def\@primarycolor{#1}
 }
 
+\newcommand{\accentcolor}[1]{
+  \global\def\@accentcolor{#1}
+}
+% Default colors, they are ugly, which will hopefully prompt changing them
+\primarycolor{ff0000}
+\accentcolor{0000ff}
+
+\def\@bulletspace{-0.7em}
+
+
+\AtBeginDocument{
+    % Place this in a hook, so that we can safely set the colors in the
+    % document preamble
+    \setmainfont{Work Sans}
+    \newfontfamily\titlefont{Work Sans Medium}[Letters=Uppercase,
+    Color=\@primarycolor]
+    \newfontfamily\sectionfont{Work Sans SemiBold}[Letters=SmallCaps,
+    Color=\@primarycolor]
+    \newfontfamily\tableheaderfont{Work Sans Medium}[Letters=SmallCaps]
+    \newfontfamily\subsubsectionfont{Work Sans Bold}
+    \newfontfamily\emphasisfont{Work Sans Medium}
+
+    \newcommand{\level}{
+    \textcolor[HTML]{\@accentcolor}{●} \hspace{\@bulletspace}
+    }
+}
+
+
 \newcommand{\emptylevel}{
-  ● \hspace{-0.7em}
+  ● \hspace{\@bulletspace}
 }
 
 
