@@ -121,7 +121,7 @@
 }
 
 \renewcommand{\emph}[1]{
-  \emphasisfont #1
+  {\emphasisfont #1}
 }
 
 \pagenumbering{gobble} % Suppresses page numbers
