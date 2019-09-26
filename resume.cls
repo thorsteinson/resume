@@ -100,9 +100,16 @@
       \includegraphics[width=10pt]{../location} & \@address \\
       \end{tabular}
     }
+
+    \maketitle
+    
+    \begin{@resume}
 }
 
 
+\AtEndDocument{
+  \end{@resume}
+}
 
 
 \newcounter{ct}
@@ -157,3 +164,16 @@
   \vspace{1.0em}
     }
 }
+
+% An hidden environment that nearly all of the document is wrapped
+% in. Allows for a 2-Column layout.
+\newenvironment{@resume}{
+    \begin{tabular}{p{4.5in} p{2.5in}}
+}
+{
+    \end{tabular}
+}
+
+% Since we're in a table, this just adds the ampersand to mark the
+% next column. It's easier for a user to understand.
+\newcommand{\newcolumn}{&}
