@@ -215,7 +215,7 @@
 \newenvironment{skilltable}[1]{
   \subsection{#1}
   % Need the fixed width so that the dots align between sections
-  \begin{tabular}{p{0.5in} l}
+  \begin{tabular}{p{0.6in} l}
 }{\end{tabular}}
 
 % Allows for specifying the level of a named skill inside of a skill table
