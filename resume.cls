@@ -220,5 +220,5 @@
 
 % Allows for specifying the level of a named skill inside of a skill table
 \newcommand{\skill}[2]{
-  \tableheaderfont #1 & \proficiency{#2} \\
+  \tableheaderfont \small #1 & \proficiency{#2} \\
 }
