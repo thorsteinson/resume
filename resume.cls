@@ -222,3 +222,10 @@
 \newcommand{\skill}[2]{
   \tableheaderfont \small #1 & \proficiency{#2} \\
 }
+
+% Condenses bullet points
+\renewenvironment{itemize}{
+  \begin{itemize}
+  \vspace{-1em}
+  \setlength\itemsep{-0.5em}
+}{\end{itemize}}
