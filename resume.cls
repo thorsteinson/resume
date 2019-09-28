@@ -62,51 +62,51 @@
 \def\@bulletspace{-0.7em}
 
 \AtBeginDocument{
-    % Place this in a hook, so that we can safely set the colors in the
-    % document preamble
-    \setmainfont{Work Sans}
-    \newfontfamily\titlefont{Work Sans Medium}[Letters=Uppercase,
-    Color=\@primarycolor]
-    \newfontfamily\sectionfont{Work Sans SemiBold}[Letters=SmallCaps,
-    Color=\@primarycolor]
-    \newfontfamily\tableheaderfont{Work Sans Medium}[Letters=SmallCaps]
-    \newfontfamily\subsubsectionfont{Work Sans Medium}[Letters=SmallCaps, Color=\@primarycolor]
-    \newfontfamily\emphasisfont{Work Sans Medium}
-    \newfontfamily\subtitlefont{Work Sans Medium}[Letters=Uppercase, Color=\@accentcolor]
+  % Place this in a hook, so that we can safely set the colors in the
+  % document preamble
+  \setmainfont{Work Sans}
+  \newfontfamily\titlefont{Work Sans Medium}[Letters=Uppercase,
+  Color=\@primarycolor]
+  \newfontfamily\sectionfont{Work Sans SemiBold}[Letters=SmallCaps,
+  Color=\@primarycolor]
+  \newfontfamily\tableheaderfont{Work Sans Medium}[Letters=SmallCaps]
+  \newfontfamily\subsubsectionfont{Work Sans Medium}[Letters=SmallCaps, Color=\@primarycolor]
+  \newfontfamily\emphasisfont{Work Sans Medium}
+  \newfontfamily\subtitlefont{Work Sans Medium}[Letters=Uppercase, Color=\@accentcolor]
 
-    \newcommand{\level}{
-    \textcolor[HTML]{\@accentcolor}{●} \hspace{\@bulletspace}
-    }
+  \newcommand{\level}{
+  \textcolor[HTML]{\@accentcolor}{●} \hspace{\@bulletspace}
+  }
 
-    \newcommand{\emptylevel}{
-    \textcolor[HTML]{\@accentcolor}{○} \hspace{\@bulletspace}
-    }
+  \newcommand{\emptylevel}{
+  \textcolor[HTML]{\@accentcolor}{○} \hspace{\@bulletspace}
+  }
 
-    \newcommand{\@makeedu}{
-      \section{Education}
-    \emph{\@university}
+  \newcommand{\@makeedu}{
+    \section{Education}
+  \emph{\@university}
 
-    \emph{\@universityStart}\textendash\emph{\@universityEnd}
+  \emph{\@universityStart}\textendash\emph{\@universityEnd}
 
-    \emph{\@universityDegree}
-    \par
-    }
+  \emph{\@universityDegree}
+  \par
+  }
 
-    \newcommand{\@makecontact}{
-      \section{Contact}
-      \begin{tabular}{c l}
-      \ifdef{\@website}{\includegraphics[width=10pt]{assets/world} & \href{\@websiteURL}{\@website} \\}{}
-      \ifdef{\@github}{\includegraphics[width=10pt]{assets/GitHub-Mark} & \href{\@githubURL}{\@github} \\}{}
-      \includegraphics[width=10pt]{assets/envelope} & \href{\@emailURL}{\@email} \\
-      \includegraphics[width=10pt]{assets/linkedin-logo} & \href{\@linkedinURL}{\@linkedin} \\
-      \ifdef{\@phone}{\includegraphics[width=10pt]{assets/telephone} & \@phone \\}{}
-      \includegraphics[width=10pt]{assets/location} & \@address \\
-      \end{tabular}
-    }
+  \newcommand{\@makecontact}{
+    \section{Contact}
+    \begin{tabular}{c l}
+    \ifdef{\@website}{\includegraphics[width=10pt]{assets/world} & \href{\@websiteURL}{\@website} \\}{}
+    \ifdef{\@github}{\includegraphics[width=10pt]{assets/GitHub-Mark} & \href{\@githubURL}{\@github} \\}{}
+    \includegraphics[width=10pt]{assets/envelope} & \href{\@emailURL}{\@email} \\
+    \includegraphics[width=10pt]{assets/linkedin-logo} & \href{\@linkedinURL}{\@linkedin} \\
+    \ifdef{\@phone}{\includegraphics[width=10pt]{assets/telephone} & \@phone \\}{}
+    \includegraphics[width=10pt]{assets/location} & \@address \\
+    \end{tabular}
+  }
 
-    \maketitle
-    
-    \begin{@resume}
+  \maketitle
+
+  \begin{@resume}
 }
 
 
@@ -139,17 +139,17 @@
 
 \renewcommand{\section}[1]{
   {
-  \vspace{2.0em}
-  \sectionfont \Large #1 \par
-  \vspace{0.4em}
+    \vspace{2.0em}
+    \sectionfont \Large #1 \par
+    \vspace{0.4em}
   }
 }
 
 \renewcommand{\subsection}[1]{
   {
-  \vspace{1.3em}
-  \sectionfont \large #1 \par
-  \vspace{0.4em}
+    \vspace{1.3em}
+    \sectionfont \large #1 \par
+    \vspace{0.4em}
   }
 }
 
@@ -167,8 +167,8 @@
   {
     \titlefont \Huge \MakeUppercase{\@author} \par
     \Large \subtitlefont \MakeUppercase{\@title} \par
-  \vspace{1.0em}
-    }
+    \vspace{1.0em}
+  }
 }
 
 % An hidden environment that nearly all of the document is wrapped
@@ -176,9 +176,7 @@
 \newenvironment{@resume}{
     \begin{tabular}{p{4.5in} p{2.5in}}
 }
-{
-    \end{tabular}
-}
+{\end{tabular}}
 
 % Since we're in a table, this just adds the ampersand to mark the
 % next column. It's easier for a user to understand.
@@ -191,18 +189,18 @@
   \subsection{#2}
   \ifthenelse{\equal{#1}{none}}{
     \begin{tabular}{l l}
-        \tableheaderfont Period & #3 -- #4 \\
-        \tableheaderfont Title &  #5 \\
+      \tableheaderfont Period & #3 -- #4 \\
+      \tableheaderfont Title &  #5 \\
     \end{tabular}
   }{
-    \begin{tabular}{c l l}
-        \multirow{2}{*}{\includegraphics[height=0.33in]{#1}} &
-        \tableheaderfont Period & #3 -- #4 \\
-        & \tableheaderfont Title &  #5 \\
-    \end{tabular}
-    }
+  \begin{tabular}{c l l}
+    \multirow{2}{*}{\includegraphics[height=0.33in]{#1}} &
+    \tableheaderfont Period & #3 -- #4 \\
+    & \tableheaderfont Title &  #5 \\
+  \end{tabular}
+  }
   \par
-  }{\par}
+}{\par}
 
   
 % An environment that captures a single team. Takes the name of the
