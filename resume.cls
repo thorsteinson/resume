@@ -10,7 +10,6 @@
 \RequirePackage{multirow}
 \RequirePackage{booktabs}
 \RequirePackage{etoolbox}
-\RequirePackage{lipsum} % Dummy text to verify formatting behavior
 \RequirePackage[top=0.75in, left=0.5in, right=0.5in, bottom=0.5in]{geometry}
 
 
