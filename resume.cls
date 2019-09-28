@@ -95,12 +95,12 @@
     \newcommand{\@makecontact}{
       \section{Contact}
       \begin{tabular}{c l}
-      \ifdef{\@website}{\includegraphics[width=10pt]{../world} & \href{\@websiteURL}{\@website} \\}{}
-      \ifdef{\@github}{\includegraphics[width=10pt]{../GitHub-Mark} & \href{\@githubURL}{\@github} \\}{}
-      \includegraphics[width=10pt]{../envelope} & \href{\@emailURL}{\@email} \\
-      \includegraphics[width=10pt]{../linkedin-logo} & \href{\@linkedinURL}{\@linkedin} \\
-      \ifdef{\@phone}{\includegraphics[width=10pt]{../telephone} & \@phone \\}{}
-      \includegraphics[width=10pt]{../location} & \@address \\
+      \ifdef{\@website}{\includegraphics[width=10pt]{assets/world} & \href{\@websiteURL}{\@website} \\}{}
+      \ifdef{\@github}{\includegraphics[width=10pt]{assets/GitHub-Mark} & \href{\@githubURL}{\@github} \\}{}
+      \includegraphics[width=10pt]{assets/envelope} & \href{\@emailURL}{\@email} \\
+      \includegraphics[width=10pt]{assets/linkedin-logo} & \href{\@linkedinURL}{\@linkedin} \\
+      \ifdef{\@phone}{\includegraphics[width=10pt]{assets/telephone} & \@phone \\}{}
+      \includegraphics[width=10pt]{assets/location} & \@address \\
       \end{tabular}
     }
 
