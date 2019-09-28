@@ -72,6 +72,7 @@
     \newfontfamily\tableheaderfont{Work Sans Medium}[Letters=SmallCaps]
     \newfontfamily\subsubsectionfont{Work Sans Medium}[Letters=SmallCaps, Color=\@primarycolor]
     \newfontfamily\emphasisfont{Work Sans Medium}
+    \newfontfamily\subtitlefont{Work Sans Medium}[Letters=Uppercase, Color=\@accentcolor]
 
     \newcommand{\level}{
     \textcolor[HTML]{\@accentcolor}{●} \hspace{\@bulletspace}
@@ -164,7 +165,8 @@
 
 \renewcommand{\maketitle}{
   {
-    \titlefont \Huge \MakeUppercase{\@author}
+    \titlefont \Huge \MakeUppercase{\@author} \par
+    \Large \subtitlefont \MakeUppercase{\@title} \par
   \vspace{1.0em}
     }
 }
@@ -224,7 +226,7 @@
 }
 
 % Condenses bullet points
-\renewenvironment{itemize}{
+\newenvironment{bullets}{
   \begin{itemize}
   \vspace{-1em}
   \setlength\itemsep{-0.5em}
