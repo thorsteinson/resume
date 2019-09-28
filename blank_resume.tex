@@ -10,6 +10,7 @@
 \documentclass[]{../resume} 
 
 \author{Caleb Thorsteinson}
+\title{Full Stack Engineer}
 
 \primarycolor{1b054c}
 \accentcolor{118aa3}
@@ -23,6 +24,8 @@
 
 \begin{document}
 
+\raggedright
+
 %----------------------------------------------------------------------------------------
 %	WORK EXPERIENCE
 %----------------------------------------------------------------------------------------
@@ -31,44 +34,36 @@
 
 \begin{employer}[../microsoft]{Microsoft} {August 2016}{April 2019}
   {Technical Program Manager}
-\begin{team}{Ambient Computing and Robotics}{Internship}
-  Developed a generic object storage system
-  for tagging and labeling
-  video footage
-  with Python, OpenCV, and HDF5.
-  Applied scientists on the team
-  used this for training a computer vision model
-  that provided real time tracking
-  of people and objects in an environment.
-\end{team}
-\begin{team}{Dynamics 365 LinkedIn Integration}{}
-  Shipped several major feature updates
-  to the Dynamics 365 LinkedIn Sales Navigator integration,
-  including a responsive org chart.
-  Facilitated relationship with LinkedIn
-  to integrate new features
-  and beat competitors to market.
-  Worked with engineering and design
-  to creatively satisfy customer requests.
+\begin{team}{Ambient Computing and Robotics}
+  \begin{bullets}
+  \item Developed a generic video tagging solution
+  \item Used Python, OpenCV, HDF5 for implementation
+  \item Applied scientists used solution for experiments
+  \item Was eventually integrated as part
+    of a real-time object and people
+    tracking system
+  \end{bullets}
 \end{team}
 \begin{team}{Sales Intelligence}{}
-  Shipped an internal webapp
-  for Account Executives
-  that curated AI and automated sales recommendations.
-  Worked closely with stakeholders
-  across multiple teams at Microsoft
-  to pool data from unrelated systems.
-  Managed feature requests
-  from internal stakeholders
-  that balanced customer priority
-  and technical dept.
-  Ran SCRUM meetings
-  to drive progress
-  and unblock scientists or engineers
-  as issues arose.
-  Executed plan for achieving GDPR compliance
-  over two month period.
-  % MS SQL % Azure Data Lake Storage
+  \begin{bullets}
+  \item Shipped quarterly updates
+    to internal web application for Microsoft Account Executives
+  \item Provided automated and AI suggested sales motions
+  \item Managed feature requests
+    from internal stakeholders
+    that balanced technical dept
+    and project scope
+  \item Executed plan for achieving GDPR compliance
+    over two month period
+  \item Coordinated working relationship
+    between engineering and
+    data science teams
+  \item Responded to critical bugs
+    and implemented postmortem process
+  \item Independently investigated data integrity issues
+    between data sources (MSSQL, Azure Data Lake Storage, CRM)
+    by writing analysis scripts in Python
+  \end{bullets}
 \end{team}
 \begin{team}{GigJam}{}
   GigJam was a cross platform application
@@ -76,19 +71,30 @@
   to be shared,
   and collaboratively edited
   in a single workspace.
-  The redaction feature
-  allowed users to include or exclude
-  certain parts of documents before they were shared.
-  I collaborated with the design and engineering teams
-  to ship two major enhancements.
-  One was auto redaction,
-  which would automatically redact personal information.
-  The other was image redaction,
-  which gave users
-  the ability to exclude a part of a image.
-  Mended relations between the design and engineering team
-  so they could easily collaborate
-  and execute more quickly.
+
+  \begin{bullets}
+  \item Mended relations between the design
+    and engineering team
+    so they could easily collaborate
+    and execute more quickly.
+  \item Led SCRUM meetings and sprint reviews
+  \item Managed feature backlog
+  \item Triaged bugs
+  \item Shipped multiple enhancements to the redaction feature
+  \end{bullets}
+\end{team}
+\begin{team}{Dynamics 365 LinkedIn Integration}{}
+  \begin{bullets}
+  \item Shipped several feature updates,
+    beating competition to market
+  \item Facilitated relationship with LinkedIn Sales Navigator team,
+    coordinating between managers
+    and technical leaders
+  \item Beat competitors to market with new features
+  \item Carefully studied user feedback and
+    market status to
+    prioritize features
+  \end{bullets}
 \end{team}
 \end{employer}
 
