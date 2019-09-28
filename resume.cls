@@ -205,8 +205,8 @@
   
 % An environment that captures a single team. Takes the name of the
 % team and the starting period or time length for that team.
-\newenvironment{team}[2]{
-  \subsubsection{#1 \hfill #2} \par
+\newenvironment{team}[1]{
+  \subsubsection{#1} \par
 }{\par}
 
 
