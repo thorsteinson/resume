@@ -10,7 +10,7 @@
 \RequirePackage{multirow}
 \RequirePackage{booktabs}
 \RequirePackage{etoolbox}
-\RequirePackage[top=0.75in, left=0.5in, right=0.5in, bottom=0.5in]{geometry}
+\RequirePackage[top=0.25in, left=0.5in, right=0.5in, bottom=0.25in]{geometry}
 
 
 \RequirePackage[colorlinks=true, urlcolor=MidnightBlue]{hyperref}
